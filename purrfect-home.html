@@ -1,0 +1,151 @@
+<!DOCTYPE html> <!-- Standard HTML5 declaration -->
+<html lang="en"> <!-- Document is in English -->
+<head> <!-- Head metadata and resources -->
+  <meta charset="utf-8" /> <!-- UTF-8 encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive viewport for mobile -->
+  <title>Purrfect Pals — Find Your Purrfect BFF</title> <!-- Home page title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnect to font files domain with CORS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet"> <!-- Load Poppins font family -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Link to global stylesheet -->
+  <meta name="description" content="A super cute, pastel cat adoption website. Meet Luna, Mochi, Bella, and more adorable kitties waiting for their forever homes." /> <!-- SEO description -->
+</head>
+<body class="home-page"> <!-- Body with a page-specific class for potential overrides -->
+  <header class="site-header"> <!-- Sticky header with site nav -->
+    <div class="container nav"> <!-- Center and nav layout -->
+      <a class="logo" href="purrfect-home.html"> <!-- Brand link to home -->
+        <span class="heart">💗</span> <!-- Heart icon background -->
+        Purrfect Pals <!-- Brand name -->
+      </a>
+      <nav> <!-- Primary navigation menu -->
+        <a href="purrfect-home.html" class="active">Home</a> <!-- Current page active -->
+        <a href="adoptables.html">Adopt</a> <!-- Adopt link -->
+        <a href="adoption-journey.html">How It Works</a> <!-- Process link -->
+        <a href="about-purrfect-pals.html">About</a> <!-- About link -->
+        <a href="paws-faq.html">FAQ</a> <!-- FAQ link -->
+        <a class="btn" href="say-meow.html">Contact Us</a> <!-- Contact button -->
+      </nav>
+    </div>
+  </header>
+
+  <main> <!-- Main page content -->
+    <section class="hero" style="padding-top: 30px;"> <!-- Hero with slight extra top padding via inline style -->
+      <div class="container hero-wrap"> <!-- Grid hero container: text + image -->
+        <div> <!-- Left column: text content -->
+          <span class="badge">New meowmates arriving weekly</span> <!-- Badge above heading -->
+          <h1>Find your purrfect BFF 🐾</h1> <!-- Main heading -->
+          <p class="lead">Sweet, snuggly, and so very adoptable — our lovely kitties can’t wait to meet you. Take a peek at some adorable faces below!</p> <!-- Intro text -->
+          <div class="cta-row"> <!-- Row of call-to-action buttons -->
+            <a class="btn" href="adoptables.html">Meet the Cats</a> <!-- Primary CTA to adoptables -->
+            <a class="btn secondary" href="adoption-journey.html">How adoption works</a> <!-- Secondary CTA to process -->
+          </div>
+        </div>
+        <div class="hero-card"> <!-- Right column: image card with rotation style -->
+          <img src="./Pictures/adorable-kitten-pillow.png" alt="Cute kitten lounging on a pillow" /> <!-- Hero image with alt -->
+          <div class="spacer"></div> <!-- Small space below image -->
+          <small>Every adoption makes room to rescue one more heart. 💞</small> <!-- Caption text -->
+        </div>
+      </div>
+    </section>
+
+    <section id="preview"> <!-- Featured cats preview section -->
+      <div class="container"> <!-- Centered content -->
+        <h2 class="section-title">Featured Furballs 💖</h2> <!-- Section heading -->
+        <p class="section-sub">A sneak peek! See more details on the Adopt page.</p> <!-- Subheading -->
+        <div class="grid cats"> <!-- Grid of small featured cards -->
+
+          <!-- Luna -->
+          <article class="card"> <!-- Card item -->
+            <img class="thumb" src="./Pictures/Ragdoll-cat_madeinitaly4k_Shutterstock.jpg" alt="Luna the Ragdoll cat" /> <!-- Image -->
+            <div class="content"> <!-- Content area -->
+              <div class="tags"> <!-- Tags row -->
+                <span class="tag">Ragdoll</span> <!-- Breed tag -->
+                <span class="tag">Gentle</span> <!-- Personality tag -->
+              </div>
+              <h3>Luna</h3> <!-- Name -->
+              <div class="weight">Weight: 3.2 kg</div> <!-- Weight meta -->
+              <p>Soft as a cloud and loves chin scritches. A true cuddle queen.</p> <!-- Short description -->
+            </div>
+            <div class="actions"> <!-- Card action area -->
+              <a class="pill" href="say-meow.html">Adopt Luna 💝</a> <!-- Link to contact form -->
+            </div>
+          </article>
+
+          <!-- Mochi -->
+          <article class="card"> <!-- Card item -->
+            <img class="thumb" src="./Pictures/white-bicolor-scottish-fold-cat-looking-open-yellow-eyes-closeup-portrait-kittenbreed_457363-2229.jpg" alt="Mochi the Scottish Fold cat" /> <!-- Image -->
+            <div class="content"> <!-- Content area -->
+              <div class="tags"> <!-- Tags row -->
+                <span class="tag">Scottish Fold</span> <!-- Breed -->
+                <span class="tag">Playful</span> <!-- Personality -->
+              </div>
+              <h3>Mochi</h3> <!-- Name -->
+              <div class="weight">Weight: 2.9 kg</div> <!-- Meta -->
+              <p>Curious explorer with the cutest folded ears. Treat enthusiast!</p> <!-- Description -->
+            </div>
+            <div class="actions"> <!-- Action -->
+              <a class="pill" href="say-meow.html">Adopt Mochi 💝</a> <!-- Contact link -->
+            </div>
+          </article>
+
+          <!-- Bella -->
+          <article class="card"> <!-- Card item -->
+            <img class="thumb" src="./Pictures/british-shorthair.jpg" alt="Bella the British Shorthair cat" /> <!-- Image -->
+            <div class="content"> <!-- Content -->
+              <div class="tags"> <!-- Tags -->
+                <span class="tag">British Shorthair</span> <!-- Breed -->
+                <span class="tag">Calm</span> <!-- Personality -->
+              </div>
+              <h3>Bella</h3> <!-- Name -->
+              <div class="weight">Weight: 4.1 kg</div> <!-- Meta -->
+              <p>Chill companion who loves window sunbaths and soft blankets.</p> <!-- Description -->
+            </div>
+            <div class="actions"> <!-- Action -->
+              <a class="pill" href="say-meow.html">Adopt Bella 💝</a> <!-- Contact link -->
+            </div>
+          </article>
+
+          <!-- Neko -->
+          <article class="card"> <!-- Card item -->
+            <img class="thumb" src="./Pictures/siamese.webp" alt="Neko the Siamese cat" /> <!-- Image -->
+            <div class="content"> <!-- Content -->
+              <div class="tags"> <!-- Tags -->
+                <span class="tag">Siamese</span> <!-- Breed -->
+                <span class="tag">Chatty</span> <!-- Personality -->
+              </div>
+              <h3>Neko</h3> <!-- Name -->
+              <div class="weight">Weight: 3.4 kg</div> <!-- Meta -->
+              <p>Tells you about his day and then curls up on your lap. Vocal sweetie.</p> <!-- Description -->
+            </div>
+            <div class="actions"> <!-- Action -->
+              <a class="pill" href="say-meow.html">Adopt Neko 💝</a> <!-- Contact link -->
+            </div>
+          </article>
+        </div>
+
+        <div class="center" style="margin-top:14px;"> <!-- Centered button with small top margin via inline style -->
+          <a class="btn" href="adoptables.html">See all kitties</a> <!-- CTA to full adoptables list -->
+        </div>
+      </div>
+    </section>
+
+    <section> <!-- Why adopt section -->
+      <div class="container"> <!-- Centered content -->
+        <h2 class="section-title">Why adopt with us? ✨</h2> <!-- Section heading -->
+        <div class="features"> <!-- Grid of features -->
+          <div class="feature"><strong>Health-checked</strong><br/>Vaccinated, dewormed, and vet-cleared.</div> <!-- Feature item -->
+          <div class="feature"><strong>Personality-matched</strong><br/>We help you find the right temperament for your home.</div> <!-- Feature item -->
+          <div class="feature"><strong>Starter kit</strong><br/>Go home with toys, tips, and a sprinkle of love.</div> <!-- Feature item -->
+          <div class="feature"><strong>Supportive fam</strong><br/>We’re here for post-adoption questions anytime.</div> <!-- Feature item -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer> <!-- Footer -->
+    <div class="container"> <!-- Center footer text -->
+      <small>© 2025 Purrfect Pals. Made with love and whiskers. 🐱💗</small> <!-- Copyright -->
+    </div>
+  </footer>
+</body>
+</html> <!-- Document end -->
