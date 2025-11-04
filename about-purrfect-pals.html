@@ -1,0 +1,72 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 so the browser knows how to parse it -->
+<html lang="en"> <!-- Starts the HTML document and sets language to English for accessibility/SEO -->
+<head> <!-- Head section contains metadata, title, and linked resources -->
+  <meta charset="utf-8" /> <!-- Sets the character encoding to UTF-8 so most characters display correctly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Makes the page responsive on mobile by matching screen width -->
+  <title>About — Purrfect Pals</title> <!-- The title that appears in the browser tab and search results -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Hints the browser to connect early to Google Fonts for faster loading -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnects to the font static domain and allows cross-origin font fetching -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet"> <!-- Loads the Poppins font with specified weights -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Links the external CSS stylesheet for page styling -->
+</head>
+<body> <!-- Body contains all content visible on the page -->
+  <header class="site-header"> <!-- Top navigation/header area with a sticky styled background -->
+    <div class="container nav"> <!-- A wrapper to center content and apply nav layout styles -->
+      <a class="logo" href="purrfect-home.html"> <!-- Logo link that navigates to the home page -->
+        <span class="heart">💗</span> <!-- Decorative heart icon inside the logo -->
+        Purrfect Pals <!-- The textual part of the logo -->
+      </a>
+      <nav> <!-- Navigation menu with links to site sections/pages -->
+        <a href="purrfect-home.html">Home</a> <!-- Link to the Home page -->
+        <a href="adoptables.html">Adopt</a> <!-- Link to the Adopt page -->
+        <a href="adoption-journey.html">How It Works</a> <!-- Link to the How It Works page -->
+        <a href="about-purrfect-pals.html" class="active">About</a> <!-- Current page link marked active for styling -->
+        <a href="paws-faq.html">FAQ</a> <!-- Link to the FAQ page -->
+        <a class="btn" href="say-meow.html">Contact Us</a> <!-- Prominent button link to the Contact page -->
+      </nav>
+    </div>
+  </header>
+
+  <main> <!-- Main content area for the page (important for accessibility) -->
+    <section class="hero"> <!-- Hero section with big title and intro text -->
+      <div class="container"> <!-- Centers and constrains content width -->
+        <span class="badge">Our story</span> <!-- Small highlighted label above the heading -->
+        <h1>About Purrfect Pals 💞</h1> <!-- Main heading for the page -->
+        <p class="lead">We’re your purr-sonal matchmakers, uniting people and whiskered soulmates. We believe every cat’s quirks make them perfect for someone and we’re here to make that meeting magical.</p> <!-- Lead paragraph describing the mission -->
+      </div>
+    </section>
+
+    <section> <!-- Section for mission and what we do -->
+      <div class="container about-page"> <!-- Container with optional specific about-page styles -->
+        <div class="grid-about-us"> <!-- Grid layout to place text and image side by side -->
+          <div class="about-us"> <!-- Text block describing mission and tasks -->
+            <h2>Our mission</h2> <!-- Section heading -->
+            <p>We help rescue cats blossom with calm, tender care and truly thoughtful matches—then stay by your side with forever support, snuggles included. Because every heart deserves a purr-fect hello and a gentle home.</p> <!-- Mission statement paragraph -->
+            <h3>What we do</h3> <!-- Subheading listing activities -->
+            <ul> <!-- Unordered list of organization activities -->
+              <li>Partner with local shelters and fosters</li> <!-- List item describing a key activity -->
+              <li>Provide vetting, vaccinations, and microchipping</li> <!-- List item about health care steps -->
+              <li>Help match personalities and lifestyles</li> <!-- List item about matching process -->
+              <li>Offer post-adoption guidance and resources</li> <!-- List item about support after adoption -->
+              <li>Follow-up check-ins after adoption</li> <!-- List item about follow-up care -->
+              <li>Create adoption day photo moments</li> <!-- List item about special experiences -->
+              <li>Share travel and pet-sitter readiness tips</li> <!-- List item about extra tips -->
+            </ul>
+          </div>
+          <div class="hero-card" style="transform:none;"> <!-- Decorative card container for the image and caption; inline style overrides rotation -->
+            <img src="./Pictures/two-cuddly-cats.jpg" alt="Two cuddly kittens together" /> <!-- Image with alt text for accessibility -->
+            <div class="spacer"></div> <!-- Small spacer to create vertical space -->
+            <small>Every cat deserves a safe, loving forever home.</small> <!-- A small caption under the image -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer> <!-- Footer area at the bottom of the page -->
+    <div class="container"> <!-- Centers the footer content -->
+      <small>Made by cat people, for cat people. 🌸</small> <!-- Small footer text note -->
+    </div>
+  </footer>
+</body>
+</html> <!-- Ends the HTML document -->
