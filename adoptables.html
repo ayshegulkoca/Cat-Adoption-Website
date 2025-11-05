@@ -1,0 +1,167 @@
+<!DOCTYPE html> <!-- HTML5 doctype so browsers render in standards mode -->
+<html lang="en"> <!-- Page language is English for accessibility and SEO -->
+<head> <!-- Head contains metadata and resource links -->
+  <meta charset="utf-8" /> <!-- UTF-8 encoding to support most characters -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Makes layout responsive on mobile -->
+  <title>Adopt — Purrfect Pals</title> <!-- Title shown in browser tab and search results -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Speed up connection to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnect to static font files with CORS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet"> <!-- Load Poppins font in needed weights -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Attach site-wide stylesheet -->
+  <meta name="description" content="Browse adoptable cats with names, breeds, weights, and adorable bios." /> <!-- Short page description for SEO -->
+</head>
+<body> <!-- Visible content starts -->
+  <header class="site-header"> <!-- Top sticky header with navigation -->
+    <div class="container nav"> <!-- Centered container and nav layout wrapper -->
+      <a class="logo" href="purrfect-home.html"> <!-- Clickable logo linking to home -->
+        <span class="heart">💗</span> <!-- Heart icon element inside logo -->
+        Purrfect Pals <!-- Brand name text -->
+      </a>
+      <nav> <!-- Navigation menu -->
+        <a href="purrfect-home.html">Home</a> <!-- Link to Home -->
+        <a href="adoptables.html" class="active">Adopt</a> <!-- Current page marked as active -->
+        <a href="adoption-journey.html">How It Works</a> <!-- Link to process page -->
+        <a href="about-purrfect-pals.html">About</a> <!-- Link to About page -->
+        <a href="paws-faq.html">FAQ</a> <!-- Link to FAQ page -->
+        <a class="btn" href="say-meow.html">Contact Us</a> <!-- Primary button to contact page -->
+      </nav>
+    </div>
+  </header>
+
+  <main> <!-- Main content area for semantics and accessibility -->
+    <section class="hero"> <!-- Hero section with title and intro -->
+      <div class="container"> <!-- Center content and control width -->
+        <span class="badge">Ready for forever homes</span> <!-- Small label above heading -->
+        <h1>Adopt a sweetheart 💘</h1> <!-- Main page heading -->
+        <p class="lead">Each kitty below lists their name, type, weight, and a tiny peek into their purr-sonality. Click to inquire!</p> <!-- Brief intro text -->
+      </div>
+    </section>
+
+    <section> <!-- Section for the list/grid of cats -->
+      <div class="container"> <!-- Center and constrain content -->
+        <div class="grid cats"> <!-- Responsive grid of cat cards -->
+
+          <!-- Luna -->
+          <article id="luna" class="card"> <!-- Card for Luna with an id for deep linking -->
+            <img class="thumb" src="./Pictures/Ragdoll-cat_madeinitaly4k_Shutterstock.jpg" alt="Luna the Ragdoll cat" /> <!-- Cat image with descriptive alt text -->
+            <div class="content"> <!-- Text content area in the card -->
+              <div class="tags"><span class="tag">Ragdoll</span></div> <!-- Breed tag -->
+              <h3>Luna</h3> <!-- Cat name -->
+              <div class="weight">Type: Ragdoll • Weight: 3.2 kg</div> <!-- Type and weight info -->
+              <p>Gentle, fluffy, and very affectionate. Prefers quiet naps and warm laps.</p> <!-- Short bio -->
+            </div>
+            <div class="actions"> <!-- Action area at bottom of card -->
+              <a class="pill" href="say-meow.html?cat=Luna">Apply to adopt 💌</a> <!-- Link to contact form with prefilled cat name -->
+            </div>
+          </article>
+
+          <!-- Mochi -->
+          <article id="mochi" class="card"> <!-- Card for Mochi -->
+            <img class="thumb" src="./Pictures/white-bicolor-scottish-fold-cat-looking-open-yellow-eyes-closeup-portrait-kittenbreed_457363-2229.jpg" alt="Mochi the Scottish Fold cat" /> <!-- Image with alt -->
+            <div class="content"> <!-- Content wrapper -->
+              <div class="tags"><span class="tag">Scottish Fold</span></div> <!-- Breed tag -->
+              <h3>Mochi</h3> <!-- Name -->
+              <div class="weight">Type: Scottish Fold • Weight: 2.9 kg</div> <!-- Info line -->
+              <p>Playtime pro who zooms after ribbons. Folds ears, folds your heart.</p> <!-- Bio -->
+            </div>
+            <div class="actions"> <!-- Action area -->
+              <a class="pill" href="say-meow.html?cat=Mochi">Apply to adopt 💌</a> <!-- Apply link with query -->
+            </div>
+          </article>
+
+          <!-- Bella -->
+          <article id="bella" class="card"> <!-- Card for Bella -->
+            <img class="thumb" src="./Pictures/british-shorthair.jpg" alt="Bella the British Shorthair cat" /> <!-- Image -->
+            <div class="content"> <!-- Content -->
+              <div class="tags"><span class="tag">British Shorthair</span></div> <!-- Tag -->
+              <h3>Bella</h3> <!-- Name -->
+              <div class="weight">Type: British Shorthair • Weight: 4.1 kg</div> <!-- Info -->
+              <p>Calm, regal, and loves bird-watching from the sill. Thick plush coat!</p> <!-- Bio -->
+            </div>
+            <div class="actions"> <!-- Action -->
+              <a class="pill" href="say-meow.html?cat=Bella">Apply to adopt 💌</a> <!-- Apply link -->
+            </div>
+          </article>
+
+          <!-- Neko -->
+          <article id="neko" class="card"> <!-- Card for Neko -->
+            <img class="thumb" src="./Pictures/siamese.webp" alt="Neko the Siamese cat" /> <!-- Image -->
+            <div class="content"> <!-- Content -->
+              <div class="tags"><span class="tag">Siamese</span></div> <!-- Tag -->
+              <h3>Neko</h3> <!-- Name -->
+              <div class="weight">Type: Siamese • Weight: 3.4 kg</div> <!-- Info -->
+              <p>Chatty companion who follows you room to room. Loves gentle pats.</p> <!-- Bio -->
+            </div>
+            <div class="actions"> <!-- Action -->
+              <a class="pill" href="say-meow.html?cat=Neko">Apply to adopt 💌</a> <!-- Apply link -->
+            </div>
+          </article>
+
+          <!-- Pumpkin -->
+          <article id="pumpkin" class="card"> <!-- Card for Pumpkin -->
+            <img class="thumb" src="./Pictures/orange.webp" alt="Pumpkin the Domestic Shorthair cat" /> <!-- Image -->
+            <div class="content"> <!-- Content -->
+              <div class="tags"><span class="tag">Domestic Shorthair</span></div> <!-- Tag -->
+              <h3>Pumpkin</h3> <!-- Name -->
+              <div class="weight">Type: DSH • Weight: 3.0 kg</div> <!-- Info -->
+              <p>Orange tabby with a heart of gold. Purr motor starts instantly.</p> <!-- Bio -->
+            </div>
+            <div class="actions"> <!-- Action -->
+              <a class="pill" href="say-meow.html?cat=Pumpkin">Apply to adopt 💌</a> <!-- Apply link -->
+            </div>
+          </article>
+
+          <!-- Daisy -->
+          <article id="daisy" class="card"> <!-- Card for Daisy -->
+            <img class="thumb" src="./Pictures/daisy.jpg" alt="Daisy the Maine Coon cat" /> <!-- Image -->
+            <div class="content"> <!-- Content -->
+              <div class="tags"><span class="tag">Maine Coon</span></div> <!-- Tag -->
+              <h3>Daisy</h3> <!-- Name -->
+              <div class="weight">Type: Maine Coon • Weight: 5.2 kg</div> <!-- Info -->
+              <p>Big fluff, bigger heart. Gentle giant who loves brushing time.</p> <!-- Bio -->
+            </div>
+            <div class="actions"> <!-- Action -->
+              <a class="pill" href="say-meow.html?cat=Daisy">Apply to adopt 💌</a> <!-- Apply link -->
+            </div>
+          </article>
+
+          <!-- Coco -->
+          <article id="coco" class="card"> <!-- Card for Coco -->
+            <img class="thumb" src="./Pictures/persian-coco.avif" alt="Coco the Persian cat" /> <!-- Image -->
+            <div class="content"> <!-- Content -->
+              <div class="tags"><span class="tag">Persian</span></div> <!-- Tag -->
+              <h3>Coco</h3> <!-- Name -->
+              <div class="weight">Type: Persian • Weight: 3.3 kg</div> <!-- Info -->
+              <p>Quiet little princess. Enjoys sunbeams and soft-speech compliments.</p> <!-- Bio -->
+            </div>
+            <div class="actions"> <!-- Action -->
+              <a class="pill" href="say-meow.html?cat=Coco">Apply to adopt 💌</a> <!-- Apply link -->
+            </div>
+          </article>
+
+          <!-- Mimi -->
+          <article id="mimi" class="card"> <!-- Card for Mimi -->
+            <img class="thumb" src="./Pictures/mimi.webp" alt="Mimi the Calico cat" /> <!-- Image -->
+            <div class="content"> <!-- Content -->
+              <div class="tags"><span class="tag">Calico</span></div> <!-- Tag -->
+              <h3>Mimi</h3> <!-- Name -->
+              <div class="weight">Type: Calico • Weight: 2.8 kg</div> <!-- Info -->
+              <p>Spunky, sweet, and super smart. Favorite toy: anything with feathers!</p> <!-- Bio -->
+            </div>
+            <div class="actions"> <!-- Action -->
+              <a class="pill" href="say-meow.html?cat=Mimi">Apply to adopt 💌</a> <!-- Apply link -->
+            </div>
+          </article>
+
+        </div> <!-- End grid -->
+      </div> <!-- End container -->
+    </section>
+  </main>
+
+  <footer> <!-- Footer area -->
+    <div class="container"> <!-- Center footer content -->
+      <small>Ready when you are. Your best friend is only a meow away. 🐾</small> <!-- Small footer note -->
+    </div>
+  </footer>
+</body>
+</html> <!-- End of document -->
