@@ -1,0 +1,104 @@
+<!DOCTYPE html> <!-- HTML5 doctype -->
+<html lang="en"> <!-- Document language is English -->
+<head> <!-- Head metadata and links -->
+  <meta charset="utf-8" /> <!-- UTF-8 encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Responsive viewport -->
+  <title>Contact Us — Purrfect Pals</title> <!-- Page title -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Preconnect to fonts static with CORS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet"> <!-- Load Poppins font -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Link to shared CSS -->
+</head>
+<body> <!-- Visual content -->
+  <header class="site-header"> <!-- Sticky header with nav -->
+    <div class="container nav"> <!-- Centered wrapper -->
+      <a class="logo" href="purrfect-home.html"> <!-- Logo link -->
+        <span class="heart">💗</span> <!-- Heart icon box -->
+        Purrfect Pals <!-- Brand text -->
+      </a>
+      <nav> <!-- Navigation -->
+        <a href="purrfect-home.html">Home</a> <!-- Home -->
+        <a href="adoptables.html">Adopt</a> <!-- Adopt -->
+        <a href="adoption-journey.html">How It Works</a> <!-- How It Works -->
+        <a href="about-purrfect-pals.html">About</a> <!-- About -->
+        <a href="paws-faq.html">FAQ</a> <!-- FAQ -->
+        <a class="btn active" href="say-meow.html">Contact Us</a> <!-- Current page active button -->
+      </nav>
+    </div>
+  </header>
+
+  <main> <!-- Main content landmark -->
+    <section class="hero"> <!-- Hero with title -->
+      <div class="container"> <!-- Centered content -->
+        <span class="badge">Say hello! 👋</span> <!-- Small badge -->
+        <h1>Contact us</h1> <!-- Page heading -->
+        <p class="lead">Got questions or found your dream kitty? We’re here for you.</p> <!-- Intro -->
+      </div>
+    </section>
+
+    <section> <!-- Contact form and details section -->
+      <div class="container"> <!-- Center and size content -->
+        <div class="grid" style="grid-template-columns: 1fr 1fr;"> <!-- Two-column grid via inline style -->
+          <form action="contact_form.php" method="POST" class="contact-form"> <!-- Contact form element (no backend yet) -->
+            <div class="field"> <!-- Field group -->
+              <label for="name">Your Name</label> <!-- Label for name input -->
+              <input id="name" name="name" type="text" placeholder="Your lovely name" required /> <!-- Text input with placeholder and required -->
+            </div>
+            <div class="field"> <!-- Field group -->
+              <label for="email">Email</label> <!-- Label -->
+              <input id="email" name="email" type="email" placeholder="you@example.com" required /> <!-- Email input with validation and required -->
+            </div>
+            <div class="field"> <!-- Field group -->
+              <label for="phone">Phone</label> <!-- Label -->
+              <input id="phone" name="phone" type="tel" placeholder="+66 ..." required pattern="^[0-9+\-\s()]{7,}$" /> <!-- Telephone input (optional) -->
+            </div>
+            <div class="field"> <!-- Field group -->
+              <label for="cat">Interested in a specific cat?</label> <!-- Label for select -->
+              <select id="cat" name="cat" required> <!-- Dropdown to pick a cat (optional) -->
+                <option value="">— Select a kitty —</option> <!-- Placeholder option -->
+                <option>Luna</option> <!-- Cat option -->
+                <option>Mochi</option> <!-- Cat option -->
+                <option>Bella</option> <!-- Cat option -->
+                <option>Neko</option> <!-- Cat option -->
+                <option>Pumpkin</option> <!-- Cat option -->
+                <option>Daisy</option> <!-- Cat option -->
+                <option>Coco</option> <!-- Cat option -->
+                <option>Mimi</option> <!-- Cat option -->
+              </select>
+            </div>
+            <div class="field">
+              <label for="msg">Message</label> <!-- Label for message textarea -->
+              <textarea id="msg" name="message" placeholder="Tell us about your home and what you’re looking for 🥰"required minlength="10"></textarea> <!-- Multiline message field -->
+            </div>
+            <button class="btn" type="submit">Send message 💌</button> <!-- Submit button styled as brand button -->
+          </form>
+
+          <div class="contact-details"> <!-- Sidebar with contact details -->
+            <div class="feature"> <!-- Info card -->
+              <strong>Email</strong><br/> <!-- Heading and line break -->
+              our-team@purrfectpals.com <!-- Email address text -->
+            </div>
+            <div class="spacer"></div> <!-- Small vertical space -->
+            <div class="feature"> <!-- Info card -->
+              <strong>Hours</strong><br/> <!-- Heading -->
+              Tue–Sun: 10:00–18:00<br/> <!-- Working hours -->
+              Monday: Closed (kitty spa day) <!-- Note for Monday closure -->
+            </div>
+            <div class="spacer"></div> <!-- Spacer -->
+            <div class="feature"> <!-- Info card -->
+              <strong>Visit us</strong><br/> <!-- Heading -->
+              Purrfect Place, Sukhumvit Rd., Khet Watthana, Bangkok 10110, Thailand <!-- Address line -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer> <!-- Footer -->
+    <div class="container"> <!-- Centered footer -->
+      <small>We’ll reply within 1–2 business days. 💖</small> <!-- Response time note -->
+    </div>
+  </footer>
+</body>
+</html> <!-- End of contact page -->
