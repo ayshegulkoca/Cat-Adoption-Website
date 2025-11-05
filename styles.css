@@ -1,0 +1,451 @@
+:root { /* Root scope for CSS variables so they can be reused throughout the stylesheet */
+  --bg1:#ffe7f3; /* Light pink background color used in the gradient background */
+  --bg2:#efe9ff; /* Light lavender background color used in the gradient background */
+  --white:#ffffff; /* Pure white color reused for backgrounds and buttons */
+  --text:#4b2a4b; /* Main text color (dark purple) for readability */
+  --muted:#7a4b74; /* Secondary text color for less prominent text */
+  --pink:#ff7ac3; /* Brand pink used in gradients and accents */
+  --pink-2:#ff99d6; /* Lighter pink used for borders or dashed outlines */
+  --magenta:#ff4fa3; /* Strong magenta used for links and CTAs to stand out */
+  --lavender:#c7b7ff; /* Lavender tone used in gradients and hover styles */
+  --lavender-2:#e6ddff; /* Lighter lavender used as subtle hover backgrounds */
+  --peach:#ffc6d9; /* Peach tone for soft tags/badges gradients */
+  --mint:#d9fff2; /* Mint tone (spare) for potential accents or backgrounds */
+  --shadow: 0 10px 24px rgba(225, 120, 180, 0.25); /* Reusable soft drop shadow to add depth */
+}
+
+* {  /* Universal selector to apply to all elements */
+  box-sizing: border-box;  /* Includes padding and border inside width/height, making sizing predictable */
+}
+html, body {  /* Targets both the html and body elements */
+  margin: 0;  /* Removes default margin so layout aligns to the edges cleanly */
+  padding: 0;  /* Removes default padding for a consistent starting point */
+  height: 100%; /* Ensures the page can use full viewport height (useful for sticky footer behavior) */
+}
+body {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /* Sets preferred fonts, with fallbacks for various systems */
+  color: var(--text); /* Sets the default text color to the main brand text color */
+  background: linear-gradient(135deg, var(--bg1), var(--bg2)) fixed; /* Applies a fixed diagonal gradient as page background */
+  line-height: 1.65; /* Increases line height for better readability of paragraphs */
+}
+
+a {  /* Styles for links */
+  color:var(--magenta);  /* Makes links magenta to stand out */
+  text-decoration: none;  /* Removes underlines by default for a cleaner look */
+}
+nav a:hover {  /* Hover state for links */
+  text-decoration: underline;  /* Adds underline on hover to indicate interactivity only in nav bar*/
+}
+
+.container {
+  width: 80vw; /* Sets container width to 80% of the viewport width to create margins on sides */
+  margin: 0 auto; /* Centers the container horizontally */
+}
+
+/* Header / Nav */
+.site-header {
+  position: sticky; /* Keeps the header stuck to the top when scrolling */
+  top: 0; /* Defines the sticking point at the very top of the viewport */
+  z-index: 100; /* Places header above other elements so it doesn't get covered */
+  backdrop-filter: blur(10px); /* Blurs content behind the header for a frosted-glass effect */
+  background: linear-gradient(90deg, rgba(255,231,243,.85), rgba(239,233,255,.85)); /* Semi-transparent gradient background for the header */
+  border-bottom: 1px solid rgba(255,255,255,.6); /* Adds a soft border line at the bottom of the header */
+}
+.nav {
+  display: flex; /* Uses flexbox to lay out the logo and nav horizontally */
+  align-items: center; /* Vertically centers items within the nav bar */
+  justify-content: space-between; /* Pushes logo to the left and nav links to the right */
+  padding: 14px 0; /* Adds vertical padding to create breathing room inside the header */
+}
+.logo {
+  display: flex;  /* Displays the logo as a flex container for icon + text alignment */
+  align-items: center;  /* Vertically centers the heart icon and text */
+  gap: 10px; /* Adds space between the heart icon and the text */
+  font-weight: 800;  /* Makes the logo text bold and prominent */
+  font-size: 22px;  /* Sets a readable, strong size for the logo text */
+  color: var(--text);  /* Uses the brand text color for the logo */
+  text-decoration: none; /* Removes underline from the logo link */
+}
+.logo .heart {
+  display: inline-flex;  /* Allows centering the emoji inside a fixed-size box */
+  align-items: center;  /* Vertically centers the emoji */
+  justify-content: center; /* Horizontally centers the emoji */
+  width: 30px;  /* Fixed width to create a pill-like background for the emoji */
+  height: 30px;  /* Fixed height to match width for a square shape */
+  border-radius: 12px; /* Rounds corners to create a soft, rounded square feel */
+  background: radial-gradient(circle at 30% 30%, #ffd7eb, #ff9cd2 60%); /* Soft radial gradient for a glossy, cute look */
+  box-shadow: var(--shadow); /* Applies a soft shadow to lift the heart visually */
+}
+nav a {
+  margin: 0 10px; /* Adds horizontal space between each nav link */
+  padding: 8px 12px; /* Increases clickable area for better usability */
+  border-radius: 999px; /* Fully rounds the background to make pill-shaped links */
+  font-weight: 600; /* Semi-bold for slightly emphasized nav links */
+  color: var(--text); /* Default nav link color is the main text color */
+  text-decoration: none; /* No underline on nav links for a tidy look */
+}
+nav a:hover { 
+  background: var(--lavender-2);  /* Light background on hover to show which link is active under cursor */
+}
+nav a.active { 
+  background: linear-gradient(90deg, var(--pink), var(--lavender));  /* Gradient background to highlight current page */
+  color: #4a204a;  /* Darker text on the gradient for contrast and readability */
+}
+nav .btn {
+  background: linear-gradient(135deg, var(--pink), var(--magenta)); /* Strong gradient to make the button stand out */
+  color: white;  /* White text for contrast on the colorful background */
+  box-shadow: var(--shadow); /* Shadow to give the button a raised look */
+}
+nav .btn:hover { 
+  background: var(--lavender);  /* Changes to a solid lavender on hover to give feedback */
+  text-decoration: none;  /* Ensures no underline appears on hover */
+  color: var(--text); /* Switches text color to main text for contrast on lavender */
+}
+
+nav a.active:hover {
+  background: linear-gradient(90deg, var(--pink), var(--lavender)); /* Keeps the same gradient on hover to avoid flicker */
+  color: #4a204a; /* Maintains readable text color on hover */
+  text-decoration: none; /* Keeps nav styling clean without underlines */
+}
+
+/* Hero */
+.hero{
+  padding: 60px 0 15px; /* Adds top and bottom spacing around the hero section for breathing room */
+  position: relative; /* Allows absolute-positioned children if needed (e.g., decorations) */
+  overflow: hidden; /* Clips any overflowing content for clean edges */
+}
+.hero-wrap {
+  display: grid;  /* Uses CSS Grid to create two columns layout in the hero */
+  grid-template-columns: 1.2fr .8fr;  /* Makes left column wider than right (content vs image) */
+  gap: 24px;  /* Space between the two columns */
+  align-items: center; /* Vertically centers items inside the grid */
+}
+.hero .badge {
+  display: inline-block; /* Allows padding and rounded corners to apply correctly */
+  font-size: 14px;  /* Small label size */
+  font-weight: 700; /* Bold text to stand out */
+  background: linear-gradient(90deg, var(--peach), var(--lavender)); /* Soft gradient background for the badge */
+  padding: 6px 12px;  /* Space inside the badge for better readability */
+  border-radius: 999px; /* Fully rounded ends to create a pill shape */
+  color: #5a2a57;  /* Darker text for contrast on the light gradient */
+  letter-spacing: .5px; /* Slight spacing to make the badge text feel crisp */
+  box-shadow: var(--shadow); /* Soft shadow to lift the badge slightly */
+}
+.hero h1 {
+  font-size: clamp(32px, 5vw, 54px); /* Responsive heading size that scales with viewport but stays within min/max */
+  line-height: 1.1;  /* Tight line height for big headings to look balanced */
+  margin: 12px 0 12px; /* Vertical spacing above and below the heading */
+}
+h2 {
+  margin-top: 0; /* Removes top margin to align headings nicely under section labels */
+}
+.hero p.lead {
+  font-size: 18px;  /* Slightly larger than normal body text for emphasis */
+  color: var(--muted);  /* Uses muted color to make it softer than main text */
+  margin-bottom: 10px; /* Space after the paragraph before buttons or content below */
+}
+.cta-row { 
+  display: flex;  /* Displays buttons in a row */
+  gap: 12px;  /* Space between buttons */
+  flex-wrap: wrap;  /* Allows buttons to wrap on small screens to avoid overflow */
+}
+.btn {
+  display: inline-block;  /* Allows width/height/padding to be applied and to sit inline */
+  border: none;  /* Removes default button border */
+  cursor: pointer; /* Shows pointer cursor to indicate clickability */
+  padding: 12px 18px;  /* Comfortable hit area for fingers/mouse */
+  border-radius: 14px;  /* Soft rounded corners for friendly look */
+  font-weight: 700; /* Bold text to make the button label stand out */
+  background: linear-gradient(135deg, var(--pink), var(--magenta)); /* Colorful gradient background for primary CTAs */
+  color: white;  /* White text for strong contrast */
+  box-shadow: var(--shadow);  /* Shadow to give depth */
+  text-decoration: none; /* Ensures no underline, even when used as a link */
+}
+.btn:hover { 
+  filter: brightness(1.06);  /* Slightly brightens on hover to show interactivity */
+  text-decoration: none;  /* Keeps the button clean without underlines */
+}
+.btn.secondary {
+  background: var(--white); /* Secondary style uses white background to appear less dominant */
+  color: var(--magenta); /* Magenta text to keep brand color feel */
+  border: 2px dashed var(--pink-2); /* Dashed border gives a softer, playful secondary style */
+}
+
+.hero-card {
+  background: linear-gradient(180deg, #fff, #fff6fc); /* Subtle gradient background for the card container */
+  border: 1px solid #ffd6ec; /* Soft pink border to define card edges */
+  border-radius: 22px; /* Very rounded corners for a cute card look */
+  padding: 18px; /* Space inside the card around the image and text */
+  box-shadow: var(--shadow); /* Shadow to lift the card off the background */
+  transform: rotate(2deg); /* Slight rotation for a playful, scrapbook-like feel */
+}
+.hero-card img {
+  width: 100%;  /* Image fills the card width */
+  height: auto;  /* Keeps the image’s aspect ratio intact */
+  border-radius: 16px;  /* Rounds the image corners to match the card style */
+  display: block; /* Removes default inline-gap below images by making it a block */
+}
+.hero-card small { 
+  color: var(--muted);  /* Softer color for the small caption text */
+}
+
+/* Sections */
+.section-title {
+  font-size: 28px;  /* Larger size for section headings */
+  margin-bottom: 8px; /* Space below before subheading or content */
+}
+.section-sub { 
+  color: var(--muted);  /* Softer color to indicate subtitle/description */
+  margin-bottom: 20px;  /* Space below before content block */
+}
+.about-us {
+  grid-row-end: span 2; /* Makes the about text block span two rows in the grid layout */
+}
+.poster {
+  display: flex; /* Flexbox to center child content */
+  justify-content: center; /* Centers horizontally */
+  align-content: center; /* Aligns content on the cross-axis when wrapping (not always visible without wrap) */
+  margin-top:64px; /* Adds top space above the poster area */
+}
+.adoption {
+  width: 30vw; /* Sets the adoption image/card width to 30% of viewport width for responsiveness */
+}
+/* Grids & cards */
+.grid {
+  display: grid; /* Base grid container for flexible, modern layouts */
+  gap: 18px; /* Space between grid items to avoid them touching */
+}
+.grid.cats {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Creates as many columns as fit, each at least 240px, then scales up */
+}
+.grid-about-us {
+  display: grid; /* Enables grid layout for the about page section */
+  gap: 18px; /* Space between the grid items */
+  grid-template-columns: .7fr .3fr; /* Two columns: left wider (text), right narrower (image) */
+  grid-template-rows: .3fr .7fr; /* Two rows with different heights to control layout verticality */
+}
+.card {
+  background: linear-gradient(180deg, #ffffff, #fff4fb); /* Soft gradient for a smooth card background */
+  border: 1px solid #ffd4ec; /* Light pink border to define edges */
+  border-radius: 18px; /* Rounded corners for a friendly card shape */
+  overflow: hidden; /* Clips child content to match the card’s rounded corners */
+  box-shadow: var(--shadow); /* Adds depth so cards stand out from the background */
+  display: flex;  /* Flexbox to stack internal content vertically */
+  flex-direction: column; /* Places image, text, and actions in a top-to-bottom order */
+}
+.card .thumb {
+  width: 100%;  /* Ensures the image fills card width */
+  aspect-ratio: 4/3;  /* Keeps a consistent aspect ratio for uniform card heights */
+  object-fit: cover; /* Crops the image to fill the box without distortion */
+}
+.card .content { 
+  padding: 14px;  /* Space around the text content inside the card */
+}
+.tags { 
+  display: flex;  /* Flex layout to place tags in a row and allow wrapping */
+  gap: 8px;  /* Space between each tag */
+  flex-wrap: wrap;  /* Allows tags to move to next line if they overflow the width */
+  margin-bottom: 8px;  /* Space below the tags before the title or text */
+}
+.tag {
+  font-size: 12px;  /* Small size to keep tags subtle */
+  font-weight:700; /* Bold text to make tags legible despite small size */
+  background: linear-gradient(90deg, var(--peach), var(--lavender)); /* Soft gradient background to match the brand style */
+  padding: 4px 10px;  /* Inner spacing so the tag text has breathing room */
+  border-radius: 999px;  /* Fully rounded for pill-shaped tags */
+  color: #5a2a57;  /* Dark text to keep good contrast on the light gradient */
+}
+.weight { 
+  font-size: 13px;  /* Slightly small text for the weight line */
+  color: var(--muted);  /* Muted color to show it’s meta information */
+}
+.card h3 { 
+  margin: 6px 0;  /* Small top/bottom margin to separate from other text */
+}
+.card p { 
+  margin: 0 0 10px;  /* Resets top margin, keeps bottom space before next element */
+  color: var(--muted);  /* Muted color to keep description softer than titles */
+}
+.card .actions { 
+  margin-top: auto;  /* Pushes actions to the bottom of the card by taking remaining space above */
+  padding: 0 14px 14px;  /* Adds bottom padding for nice spacing inside the card */
+}
+.pill {
+  display: inline-flex;  /* Inline button-like element that supports alignment and padding */
+  align-items: center;  /* Vertically centers text/icons */
+  gap: 8px; /* Space for potential icon + text inside the pill */
+  padding: 8px 12px;  /* Comfortable clickable area */
+  border-radius: 999px;  /* Full rounding to form a pill shape */
+  font-weight:700; /* Bold text to make the action noticeable */
+  background: #fff;  /* White background to contrast with card gradient */
+  border: 2px solid #ffd6ec;  /* Soft pink border to match the brand theme */
+  color: var(--magenta); /* Magenta text to match brand and indicate action */
+  text-decoration: none;  /* Removes underline if used as a link */
+}
+.pill:hover { 
+  background: #fff0f8;  /* Very light pink hover to show interactivity without heavy change */
+  text-decoration: none;  /* Keeps appearance clean on hover */
+}
+
+/* Feature list */
+.features {
+  display: grid;  /* Grid layout for features for consistent alignment */
+  gap: 14px;  /* Space between feature cards */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive columns that grow/shrink and wrap */
+}
+.feature {
+  background: #fff;  /* White background to make cards clean and readable */
+  border: 1px solid #fbd8ef;  /* Light border to define the card edges */
+  border-radius: 16px;  /* Rounded corners for consistency with other components */
+  padding: 16px;  /* Inner spacing so text is not cramped */
+  box-shadow: var(--shadow); /* Shadow to elevate the card from the background */
+}
+
+/* Footer */
+footer {
+  margin-top: 24px; /* Space above the footer to separate it from the content */
+  background: linear-gradient(90deg, rgba(255,231,243,.85), rgba(239,233,255,.85)); /* Soft translucent gradient background for the footer */
+  border-top: 1px solid rgba(255,255,255,.6); /* Top border to separate footer from content above */
+  padding: 22px 0; /* Vertical padding inside the footer for comfortable spacing */
+  color: var(--muted); /* Sets footer text to muted color for a soft look */
+  text-align: center; /* Centers footer text horizontally */
+  position: sticky; /* Keeps the footer at the bottom of the viewport until content pushes it */
+  top: 100vh; /* Positions the sticky footer to stick at the bottom when content is short */
+}
+
+/* Forms */
+form {
+  background: #fff;  /* White background for good readability */
+  border:1px solid #ffd6ec;  /* Light pink border to fit the brand style */
+  border-radius: 16px; /* Rounded corners to match other components */
+  padding: 18px;  /* Internal spacing to make the form comfortable to use */
+  box-shadow: var(--shadow); /* Shadow to lift the form visually */
+}
+.field {
+  display: flex;  /* Stack label and input vertically */
+  flex-direction: column;  /* Column direction to place label on top, input below */
+  gap: 6px;  /* Small vertical space between label and input */
+  margin-bottom: 12px; /* Space between field groups to avoid clutter */
+}
+label { 
+  font-weight:700;  /* Bold labels so field names are clear */
+}
+input, select, textarea {
+  padding: 12px 12px; /* Comfortable padding inside inputs for readability and tap area */
+  border-radius: 12px; /* Rounded corners to keep a soft, friendly look */
+  border: 2px solid #ffd6ec; /* Pink border consistent with the site theme */
+  outline: none;  /* Removes default blue outline (we’ll provide custom focus) */
+  font-size: 16px; /* Legible input text size */
+  background: #fffdfd; /* Very light warm white background for a gentle, non-harsh input look */
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--magenta); /* Highlights focused field with brand color to guide the user */
+  box-shadow: 0 0 0 4px rgba(255,79,163,.12); /* Adds a soft glow ring for accessibility and focus visibility */
+}
+textarea { 
+  min-height: 120px;  /* Gives textareas enough height by default for comfortable typing */
+  resize: vertical;  /* Allows resizing vertically but keeps width fixed to maintain layout */
+}
+
+/* Utilities */
+.center { 
+  text-align:center;  /* Utility class to center text */
+}
+.spacer { 
+  height: 10px;  /* Small vertical spacer element for fine-tuning space between items */
+}
+.sr-only {
+  position:absolute;  /* Positions off-screen to hide visually but keep accessible to screen readers */
+  width:1px;  /* Minimizes space taken while still present in DOM */
+  height:1px;  /* Same as width to make a tiny accessible element */
+  padding:0;  /* Remove padding so it stays minimal */
+  margin:-1px;  /* Negative margin to ensure it doesn’t affect layout flow */
+  overflow:hidden;  /* Hides any overflowed content */
+  clip:rect(0,0,0,0);  /* Clips the element to nothing visually */
+  white-space:nowrap;  /* Prevents line breaks inside (keeps it compact) */
+  border:0; /* No border to avoid any visible artifact */
+}
+
+/* Responsive tweaks */
+@media (max-width: 1200px) { /* Applies these styles when viewport width is 1200px or less */
+  .hero-wrap { 
+    grid-template-columns: 1fr; /* Stacks hero content and image vertically for narrow screens */
+    gap: 40px; /* More space between stacked items for visual separation */
+  }
+  .about-page .hero-card {
+    grid-row-start: 1; /* Moves the hero-card to appear before text on smaller screens */
+    grid-column-end: span 2; /* Lets the card span across both columns if grid context applies */
+  }
+  .about-us { 
+    grid-column-end: span 2; /* Ensures the about text takes full width in grid context */
+    grid-row-end: auto;  /* Resets the previous row spanning for better mobile flow */
+  }
+
+  .site-header { 
+    position: relative;  /* Turns off sticky behavior on smaller screens to avoid overlay issues */
+  } 
+  .hero-card {
+    width: 50vw; /* Limits hero image card to 50% of the viewport width for mobile/tablet */
+    height: auto; /* Keeps natural aspect ratio of the content inside */
+    justify-self: center; /* Centers the card in the grid column */
+  }
+  .adoption {
+    width: 50vw; /* Makes adoption card wider on smaller screens for better visibility */
+  }
+  .contact-details {
+    grid-row-start: 2;  /* Moves contact details below the form in grid layout on smaller screens */
+    grid-column-end: span 2;  /* Makes it stretch full width */
+  }
+  .contact-form {
+    grid-row-start: 1;  /* Places the form first in the grid layout on small screens */
+    grid-column-end: span 2;  /* Makes the form stretch full width */
+  }
+  section { 
+    padding: 10px 0;  /* Reduces vertical padding for tighter mobile layout */
+  }
+  .hero { 
+    padding: 30px 0 10px;  /* Reduces hero spacing to fit small screens better */
+  }
+  .logo {
+    justify-content: center; /* Centers the logo when nav becomes stacked */
+    padding-bottom: 16px; /* Adds space below logo before the nav grid */
+  }
+
+  .nav {
+    display: grid; /* Changes nav layout to grid for better wrapping on small screens */
+    grid-template-columns: 1fr; /* Stacks the logo and menu vertically */
+    justify-content: stretch; /* Stretches items to fill available width */
+    align-items: center; /* Centers items vertically within each grid row */
+    row-gap: 12px; /* Space between rows (logo and menu) */
+    padding: 10px 0 16px; /* Adjusted padding for a compact header */
+    width: 100%; /* Ensures nav spans full width */
+  }
+
+  .nav nav {
+    display: grid; /* Uses grid for the internal links too */
+    grid-template-columns: repeat(3, 1fr); /* Arranges links into 3 equal columns */
+    gap: 10px 10px; /* Equal row and column gaps between links */
+    width: 100%; /* Makes the menu span full width */
+  }
+
+  .nav a {
+    display: block; /* Makes links fill their grid cells */
+    text-align: center; /* Centers link text for uniform button-like look */
+    width: 100%; /* Ensures the link area fills the grid cell width */
+    padding: 12px 10px; /* Larger touch target for mobile */
+    margin: 0; /* Removes previous margins to rely on grid gap */
+    border-radius: 8px; /* Slightly smaller rounding for tighter mobile layout */
+  }
+  .poster {
+    margin-top: 10px; /* Reduces top spacing on poster section for compactness */
+  }
+}
+
+@media (max-width: 520px){ /* Further tweaks for very small screens like phones */
+  .nav nav { 
+    grid-template-columns: repeat(2, 1fr);  /* Switches nav to 2 columns so items are bigger and more tappable */
+  }
+  .hero-card {
+    width: 80vw; /* Makes the hero card almost full width to look good on small phones */
+  }
+}
